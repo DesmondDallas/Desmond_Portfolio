@@ -1,0 +1,519 @@
+@use '../abstracts';
+
+#websites {
+  height: auto;
+  background-color: #171717;
+}
+
+/* header section start */
+.websites-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px
+}
+
+#main-section {
+  position: relative;
+}
+
+.websites-container div h1 {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.websites-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(31, 30, 30);
+  width: 90%;
+  margin: 7% auto 3% auto;
+}
+
+.websites-container div h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 5%
+}
+
+.websites-container div p {
+  color: white;
+  font-size: 1rem;
+}
+
+#websites::before {
+  /* content: "About\00000a Me"; */
+  content: "ART OF CODE";
+  position: absolute;
+  white-space: pre;
+  right: 15px;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  top: 6rem;
+  color: rgb(255, 253, 253);
+  background-color: red;
+  padding: 10px 0PX;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  z-index: 1;
+
+}
+
+/* header section end */
+
+/* main top section start */
+#main-top-section {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  gap: 10px;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 600px) {
+  #main-top-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  #main-top-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-top-section {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+#main-top-section a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7em 0em 0.7em 1em;
+}
+
+.main-box-1 {
+  background-color: #20272d;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bold;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.main-box-1:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em red;
+  transition: opacity 0.25s;
+  transform: translateY(-0.25em)
+}
+
+/** arrow 2 **/
+
+
+
+/** arrow 2 **/
+
+/** start
+  .arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-right: 5px
+  }
+  
+  .arrow-up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  }
+  
+  .arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  }
+  
+  .arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  }
+  
+  .arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  }
+  
+  .arrow-left,
+  .arrow-up,
+  .arrow-down {
+  display: none
+  }
+  
+  /* arrow end **/
+
+.search-container form {
+  position: relative;
+  color: white;
+}
+
+.search-container form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: transparent;
+  border: transparent;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  outline: 0;
+}
+
+.search-container form input[type=text] {
+  border: none;
+  padding: 7px;
+  background: var(--clr-form-input-color);
+  width: 100%;
+}
+
+.search-container input[type="text"]:focus {
+  border: none;
+  /*outline: none;*/
+}
+
+/* main top section end */
+
+/** main section **/
+.main-inner {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, auto);
+  margin: 0 auto;
+  width: 90%;
+  grid-template-rows: repeat(6, 300px);
+}
+
+@media (min-width: 768px) {
+  .main-inner {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 300px);
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .box-image h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+
+  .box-image p {
+    position: absolute;
+    top: 40px;
+  }
+
+  .search-container form input[type=text] {
+    padding: 13px;
+  }
+}
+
+@media (min-width: 900px) {
+  .main-inner {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, 300px);
+  }
+
+  .main-box-1 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-inner {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 300px);
+  }
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px 80px 0px;
+}
+
+.web-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  color: white;
+  background-image: url('https://i.postimg.cc/TY5kVGwz/screenshot-png.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.web-box:hover {
+  opacity: 0.7;
+  transform: scale(0.98);
+  transition: all 0.5s ease-in;
+}
+
+.web-box h3 {
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  bottom: 10;
+  background-color: #1c2126;
+  position: absolute;
+  top: 20px;
+}
+
+.box-image p {
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  bottom: 10;
+  background-color: red;
+  position: absolute;
+  top: 47px;
+}
+
+.box-image:nth-of-type(1) {
+  background-image: url('https://i.postimg.cc/sxTbRzcQ/html.jpg');
+}
+
+.box-image:nth-of-type(2) {
+  background-image: url('https://i.postimg.cc/W4tG9vDY/gaming.jpg')
+}
+
+.box-image:nth-of-type(3) {
+  background-image: url('https://i.postimg.cc/BbSRybxf/beach.jpg')
+}
+
+.box-image:nth-of-type(4) {
+  background-image: url('https://i.postimg.cc/mg2K4WZS/applelaptop.jpg')
+}
+
+.box-image:nth-of-type(5) {
+  background-image: url('https://i.postimg.cc/j2bkkGkP/computertable.jpg')
+}
+
+.box-image:nth-of-type(6) {
+  background-image: url('https://i.postimg.cc/L60GCH5G/keypad.jpg')
+}
+
+/** https://www.collectiveray.com/dark-websites **/
+/** https://css-tricks.com/making-pure-css-playpause-button/ **/
+
+
+
+
+/* https://www.youtube.com/watch?v=exb2ab72Xhs */
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+/* image overlay styling */
+.image__overlay>* {
+  /*target every direct child */
+  transform: translateY(20px);
+  /* move text down 20px */
+  transition: transform 0.25s;
+}
+
+/*
+  .image__overlay--blur {
+  backdrop-filter: blur(5px)
+  }
+  */
+
+
+
+.image__overlay:hover>* {
+  transform: translateY(0);
+}
+
+@keyframes tests {
+  10% {
+    border: 3px solid red
+  }
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+/* image overlay styling */
+
+/*https://www.bing.com/videos/search?q=how+to+hide+text+behind+image+css&&view=detail&mid=B6580F27C2FC62C71DAFB6580F27C2FC62C71DAF&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dhow%2Bto%2Bhide%2Btext%2Bbehind%2Bimage%2Bcss%26qpvt%3Dhow%2Bto%2Bhide%2Btext%2Bbehind%2Bimage%2Bcss%26FORM%3DVDRE/
+  
+  */
+
+
+
+
+
+.box-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://i.postimg.cc/sxTbRzcQ/html.jpg');
+}
+
+.box-image:hover {
+  transform: scale(0.98);
+  transition: all 0.5s ease-in;
+}
+
+.box-image__img {
+  display: block;
+  width: 100%;
+}
+
+.box-image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  text-decoration: none
+}
+
+/* image overlay styling */
+.box-image__overlay>* {
+  /*target every direct child */
+  transform: translateY(20px);
+  /* move text down 20px */
+  transition: transform 0.25s;
+}
+
+/*
+  .box-image__overlay--blur {
+  backdrop-filter: blur(5px)
+  }*/
+
+.box-image__overlay:hover {
+  opacity: 1;
+}
+
+.box-image-bottom__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s;
+  text-decoration: none;
+  background-color: rgba(255, 0, 0, 0.9);
+  padding: 0px 10px;
+  font-size: 1.3rem;
+}
+
+
+.box-image__overlay:hover>* {
+  transform: translateY(0);
+}
+
+.box-image__title {
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+}
+
+.box-image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+.box-image h3 {
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  bottom: 10;
+  background-color: #1c2126;
+  position: absolute;
+  top: 20px;
+  color: white
+}
+
+.box-image p {
+  text-decoration: none;
+  padding: 5px 13px;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  bottom: 10;
+  background-color: red;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+  left: 0px
+}
+
+.box-image p:before {
+  content: "\f13b";
+  font-family: Fontawesome;
+  color: white;
+  padding-right: 10px
+}
+
+// https://www.youtube.com/watch?v=nMGVwP3ww2M

@@ -1,0 +1,83 @@
+@use '../abstracts';
+
+header {
+  position: relative;
+}
+
+//typed effect
+#head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: abstracts.$body-color;
+  color: white;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .head-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 2;
+    width: 100%;
+    font-size: 1em;
+    margin: auto
+  }
+
+  .head-title h1 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typeWriter 2.5s steps(31, end) forwards,
+      blink .8s infinite;
+  }
+
+  .head-title p {
+    text-align: center;
+    line-height: 1.8;
+    width: 60%;
+    margin: auto
+  }
+}
+
+@media (max-width: 576px) {
+  .head-title h1 {
+    font-size: 1em;
+  }
+
+  .head-title {
+    width: 38%
+  }
+}
+
+@keyframes typeWriter {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent
+  }
+
+  to {
+    border-color: rgb(179, 28, 28, 0.5);
+  }
+}
+
+//animation

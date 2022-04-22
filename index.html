@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Document</title>
+</head>
+<!-- https://www.youtube.com/watch?v=rfpRZ2t_BrQ -->
+
+<body>
+  <header>
+    <div class="cursor">
+    </div>
+    <nav class="Navbar_items overlay">
+      <a href="#" class="nav_logo">Logo</a>
+
+      <div class="overlay-content">
+        <ul>
+          <li class="Navbar__Link">
+            <a href="#home">About</a>
+          </li>
+          <li class="Navbar__Link">
+            <a href="websites.html">Projects</a>
+          </li>
+          <li class="Navbar__Link">
+            <a href="#home">Contact</a>
+          </li>
+          <li class="Navbar__Link">
+            <a href="#home">Blog</a>
+          </li>
+          <li class="Navbar__Link">
+            <a href="signup">Sign up</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="toggle Navbar__Link-toggle">
+        <span class="material-icons">menu</span>
+      </div>
+    </nav>
+
+    <section id="head-section">
+      <div class="container">
+        <div class="head-title">
+          <h1>Hello, my name is Desmond Dallas</h1>
+          <p>I am a self-taught Web Developer and founder of Code To Program. I am available for contract and
+            freelance work. Take a look at my the web portfolio page.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+  </header>
+
+  <script>
+    function classToggle() {
+      const navItem = document.querySelectorAll('.Navbar_items')
+
+      navItem.forEach(nav => nav.classList.toggle('toggle_menu'));
+    }
+
+    document.querySelector('.toggle')
+      .addEventListener('click', classToggle);
+
+    // Pointer styles start
+    // change pointer
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+    })
+
+    // expand on click
+    document.addEventListener('click', () => {
+      cursor.classList.add("expand");
+
+      setTimeout(() => {
+        cursor.classList.remove("expand");
+      }, 500)
+    })
+    // pointer styles end
+  </script>
+
+
+</body>
+
+</html>
