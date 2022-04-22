@@ -1,5 +1,6 @@
 @use '../abstracts';
 
+// https://www.youtube.com/watch?v=aywzn9cf-_U
 header {
   position: relative;
 }
@@ -12,6 +13,8 @@ header {
   align-items: center;
   height: 100vh;
   background-color: abstracts.$body-color;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
   color: white;
 
   .container {
